@@ -1,0 +1,30 @@
+dbt_lab:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      ######## Please replace with your Snowflake account name
+      account: dw94512.eu-west-3.aws
+      user: ilovebbq
+      ######## Please replace with your Snowflake dbt user password
+      password: xXxanderlow159357007
+      
+      role: sysadmin
+      database: CHIHEB_DB_DEV
+      warehouse: CHIHEB_WH
+      schema: public
+      threads: 10
+    prod:
+      type: snowflake
+      ######## Please replace with your Snowflake account name
+      account: dw94512.eu-west-3.aws  
+      
+      user: ilovebbq
+      ######## Please replace with your Snowflake dbt user password
+      password: xXxanderlow159357007
+      
+      role: sysadmin
+      database: CHIHEB_DB_PROD
+      warehouse: CHIHEB_WH
+      schema: public
+      threads: 10
